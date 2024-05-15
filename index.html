@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Custom styles for this template -->
+    <style>
+      .wrapper {
+        display: flex;
+        width: 100%;
+        align-items: stretch;
+      }
+      #sidebar {
+        min-width: 250px;
+        max-width: 250px;
+        min-height: 100vh;
+        color: #fff;
+        transition: all 0.3s;
+        background: #113f67;
+      }
+      .btn {
+        width: 100%;
+        color: #fff;
+        background-color: #0b2f4e;
+        margin-top: 3px;
+      }
+      .btn:hover {
+        background-color: #366a97;
+        color: #fff;
+      }
+      .navbar {
+        background-color: #0b2f4e;
+      }
+      .upload-section {
+        display: none;
+      }
+    </style>
+
+    <title>CCM Test Matrix - Danica Pension</title>
+  </head>
+  <body>
+    <!-- Top Navigation -->
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand text-white" href="#">Danica Pension</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link text-white" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <!-- Add additional links here -->
+        </ul>
+      </div>
+    </nav>
+
+    <div class="wrapper">
+      <!-- Sidebar -->
+      <nav id="sidebar">
+        <div class="sidebar-header ml-3 mt-3">
+          <h3>Test Matrix</h3>
+          <p>Danica Pension</p>
+        </div>
+        <ul class="list-unstyled components">
+          <li><button class="btn" onclick="uploadSingleFile()">Upload Single File</button></li>
+          <li><button class="btn" onclick="updateContent('Multiple Files Upload')">Upload Multiple Files</button></li>
+          <li><button class="btn" onclick="updateContent('Test Matrix List')">Test Matrix List</button></li>
+        </ul>
+      </nav>
+
+      <!-- Page Content -->
+      <div class="ml-3 mt-3" id="content">
+        <h4 id="content-heading">Select an action from the sidebar</h4>
+        
+        <!-- Upload Section -->
+        <div id="upload-section" class="upload-section mt-3">
+          <input type="file" id="file-upload" accept=".xml" onchange="displayFileContent()">
+          <button onclick="testnow()">Test Now</button>
+          <button onclick="clearUploadFile()">Clear</button>
+
+        </div>
+        
+        <!-- File Display Section -->
+        <div id="file-display-section" class="mt-3">
+          <!-- XML file content will be displayed here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Link to the external JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+</html>
